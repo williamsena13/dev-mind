@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-center">Simple Calculator</h1>
+    <h1 class="text-center">01 - Simple Calculator</h1>
     <p>
       Create a calculator that takes two numbers and an operator (+, -, *, /)
       and returns the result of the operation
@@ -12,7 +12,7 @@
   <script>
 import Calculator from "../components/Calculator.vue";
 export default {
-  name: "HomeView",
+  name: "CalculatorView",
   components: {
     Calculator,
   },

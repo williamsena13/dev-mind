@@ -169,7 +169,5 @@ export default {
   },
 };
 </script>
-
 <style>
-/* Add your custom styling here if needed */
 </style>
