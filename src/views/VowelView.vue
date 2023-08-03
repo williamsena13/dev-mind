@@ -6,13 +6,17 @@
       program should ask the user for a sentence and display how many vowels it
       has.
     </p>
+    <Table />
   </div>
 </template>
   
-  <script>
+<script>
+import Table from "../components/Table.vue";
 export default {
   name: "VowelView",
-  components: {},
+  components: {
+    Table,
+  },
 };
 </script>
 <style>
