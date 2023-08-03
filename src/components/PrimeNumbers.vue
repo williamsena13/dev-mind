@@ -10,6 +10,9 @@
         />
         <h5>Números Primos encontrados!</h5>
         <p>{{ primeNumbersArray.join(", ") }}</p>
+
+        <h5>Primeiros 10 Números Primos Encontrados:</h5>
+        <p>{{ findFirstTenPrimes().join(", ") }}</p>
       </div>
     </div>
   </div>
@@ -17,6 +20,7 @@
 
 <script>
 export default {
+  name: "PrimeNumbersComponent",
   data() {
     return {
       randomArrayInput: "",
@@ -85,8 +89,20 @@ export default {
         return;
       }
 
-      this.randomArray = parsedArray;
+      this.randomArray = parsedArray.sort((a, b) => a - b);
       this.primeNumbersArray = this.findPrimes(parsedArray);
+    },
+
+    findFirstTenPrimes() {
+      const firstTenPrimes = [];
+      let number = 2;
+      while (firstTenPrimes.length < 10) {
+        if (this.isPrime(number)) {
+          firstTenPrimes.push(number);
+        }
+        number++;
+      }
+      return firstTenPrimes.sort((a, b) => a - b); // Ordena a array crescentemente
     },
   },
 };

@@ -2,15 +2,15 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 // Importe os componentes que deseja usar nas rotas
-import Home from "./views/Home.vue";
-import Calculator from "./views/Calculator.vue";
-import PrimeNumbers from "./views/PrimeNumbers.vue";
-import Palindrome from "./views/Palindrome.vue";
-import Factorial from "./views/Factorial.vue";
-import Table from "./views/Table.vue";
-import Vowel from "./views/Vowel.vue";
-import Average from "./views/Average.vue";
-import Interest from "./views/InterestCalculation.vue";
+import Home from "./views/HomeView.vue";
+import Calculator from "./views/CalculatorView.vue";
+import PrimeNumbers from "./views/PrimeNumbersView.vue";
+import Palindrome from "./views/PalindromeView.vue";
+import Factorial from "./views/FactorialView.vue";
+import Table from "./views/TableView.vue";
+import Vowel from "./views/VowelView.vue";
+import Average from "./views/AverageView.vue";
+import Interest from "./views/InterestCalculationView.vue";
 
 Vue.use(VueRouter);
 

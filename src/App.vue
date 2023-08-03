@@ -7,15 +7,60 @@
       <div class="inner">
         <h3 class="masthead-brand">Dev Mind</h3>
         <nav class="nav nav-masthead justify-content-center">
-          <router-link class="nav-link" to="/home">Home</router-link>
-          <router-link class="nav-link" to="/calculator">Nº 1</router-link>
-          <router-link class="nav-link" to="/prime">Nº 2</router-link>
-          <router-link class="nav-link" to="/factorial">Nº 3</router-link>
-          <router-link class="nav-link" to="/palindrome">Nº 4</router-link>
-          <router-link class="nav-link" to="/table">Nº 5</router-link>
-          <router-link class="nav-link" to="/vowel">Nº 6</router-link>
-          <router-link class="nav-link" to="/average">Nº 7</router-link>
-          <router-link class="nav-link" to="/interest">Nº 8</router-link>
+          <router-link
+            class="nav-link"
+            to="/home"
+            :class="{ active: isRouteActive('/home') }"
+            >Home</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/calculator"
+            :class="{ active: isRouteActive('/calculator') }"
+            >Nº 1</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/prime"
+            :class="{ active: isRouteActive('/prime') }"
+            >Nº 2</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/factorial"
+            :class="{ active: isRouteActive('/factorial') }"
+            >Nº 3</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/palindrome"
+            :class="{ active: isRouteActive('/palindrome') }"
+            >Nº 4</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/table"
+            :class="{ active: isRouteActive('/table') }"
+            >Nº 5</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/vowel"
+            :class="{ active: isRouteActive('/vowel') }"
+            >Nº 6</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/average"
+            :class="{ active: isRouteActive('/average') }"
+            >Nº 7</router-link
+          >
+          <router-link
+            class="nav-link"
+            to="/interest"
+            :class="{ active: isRouteActive('/interest') }"
+            >Nº 8</router-link
+          >
         </nav>
       </div>
     </header>
@@ -41,6 +86,11 @@
 export default {
   name: "App",
   components: {},
+  methods: {
+    isRouteActive(route) {
+      return this.$route.path === route;
+    },
+  },
 };
 </script>
 

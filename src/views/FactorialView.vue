@@ -6,14 +6,17 @@
       program that allows the user to enter a number and displays the
       corresponding factorial.
     </p>
-    <PrimeNumbers />
+    <Factorial />
   </div>
 </template>
   
-  <script>
+<script>
+import Factorial from "../components/Fractorial.vue";
 export default {
   name: "FactorialView",
-  components: {},
+  components: {
+    Factorial,
+  },
 };
 </script>
 <style>
